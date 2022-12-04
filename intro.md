@@ -25,11 +25,14 @@ int age = 18;
 int age;
 age = 18;
 ```
-> Regras ao nomear variáveis:
-> - Não comece com números: use uma letra, underscore (underline) ou $.
-> - Não use espaços em branco.
-> - Não use acentos gráficos (presentes na língua portuguesa).
-> - Prefira usar o padrão ```camelCase```.
+
+> Não podemos realizar operações com as variáveis sem antes inicializá-las!
+
+Regras ao nomear variáveis:
+- Não comece com números: use uma letra, underscore (underline) ou $.
+- Não use espaços em branco.
+- Não use acentos gráficos (presentes na língua portuguesa).
+- Prefira usar o padrão ```camelCase```.
 
 ### Tipos primitivos
 
