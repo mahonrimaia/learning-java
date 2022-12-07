@@ -1,3 +1,5 @@
+package Capitulo3;
+
 public class Exercicio3_2 {
     public static void main(String[] args) {
         int soma = 0;

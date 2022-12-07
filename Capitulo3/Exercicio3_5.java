@@ -1,3 +1,5 @@
+package Capitulo3;
+
 public class Exercicio3_5 {
     public static void main(String[] args) {
         long acumulador = 1;
