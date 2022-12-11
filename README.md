@@ -139,3 +139,78 @@ import x.y.z.*;
 Porém fazer isso não é considerada uma boa prática. Não porque implica em perda de performance em tempo de execução, mas sim porque pode confundir outros programadores trabalhando em seu código. O ideal é importar cada classe separadamente. Caso você esqueça de importar alguma classe, a IDE vai sugerir a correção. Caso sua IDE substitua seus imports pelo caractere curinga, é bom configurá-la para não realizar esse tipo de import.
 
 ### Ferramentas: JAR e Javadoc
+
+### Herança
+
+### Sobrescrita de métodos (Reescrever/Sobrescrever/_Override_)
+A sobrescrita está diretamente relacionada com o princípio de herança.
+
+Em algum momento do desenvolvimento do código, sua subclasse pode herdar um método que você deseja que apresente um comportamento diferente do definido na superclasse. Por exemplo:
+
+```java
+// Superclasse Animal
+package ...
+
+import ...
+
+public class Animal {
+    // atributos
+    // demais métodos
+    
+    public void emitirSom() {
+        System.out.println("Som");
+    }
+}
+```
+
+```java
+// Subclasse Cachorro
+package ...
+
+import ...
+
+public class Cachorro extends Animal {
+    // atributos
+    // métodos
+}
+```
+
+Ao herder os atributos e métodos da superclasse Animal, um objeto do tipo Cachorro vai apresentar a mensagem "Som" ao invocar o método herdado ```emitirSom()```. Caso queira alterar a mensagem do método (seu comportamento) para algo mais coerente ao tipo Cachorro você deve sobrescrever o método em questão. Por exemplo:
+
+```java
+// Subclasse Cachorro
+package ...
+
+import ...
+
+public class Cachorro extends Animal {
+    // demais atributos e métodos...
+    
+    // Sobrescrita do método herdado da superclasse
+    public void emitirSom() {
+        System.out.println("Au, au!");
+    }
+}
+```
+
+Ao sobrescrever um método herdado o Java vai priorizar esse método em relação ao método declarado na superclasse.
+
+Uma forma mais correta de sobrescrever um método é utilizando a anotação **@Override**:
+
+```java
+package ...
+
+import ...
+
+public class Cachorro extends Animal {
+    // demais atributos e métodos...
+    
+    // Sobrescrita do método herdado
+    @Override
+    public void emitirSom() {
+        System.out.println("Au, au!");
+    }
+}
+```
+
+Utilizando a anotação o Java entende que há uma sobrescrita a seguir e caso haja alguma inconsistência não compilará o código. Ou seja, utilizar a anotação **@Override** é uma boa prática pois você estará facilitando a visualização de uma sobrescrita caso outro programador veja seu código e garantindo que a mesma é intencional.
