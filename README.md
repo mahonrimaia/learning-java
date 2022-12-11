@@ -35,6 +35,16 @@ Regras ao nomear variáveis:
 - Prefira usar o padrão ```camelCase```.
 
 ### Tipos primitivos
+|      TIPO     |             DESCRIÇÃO             | VALOR DEFAULT | TAMANHO |            LITERAIS DE EXEMPLO           |                     RANGE DE VALORES                    |
+|:-------------:|:----------------------------------|:-------------:|:-------:|:----------------------------------------:|:-------------------------------------------------------:|
+| ```boolean``` | Verdadeiro ou falso               | false         | 1 bit   | true, false                              | true, false                                             |
+| ```byte```    | Inteiro de complemento para dois  | 0             | 8 bits  | N/A                                      | -128 a 127                                              |
+| ```char```    | Caractere Unicode                 | \u0000        | 16 bits | 'a','\u0041','\101','\\\\','\\','\n','ß' | Valores de 0 a 255 da tabela ASCII                      |
+| ```short```   | Inteiro de complemento para dois  | 0             | 16 bits | N/A                                      | -32.768 a 32.767                                        |
+| ```int```     | Inteiro de complemento para dois  | 0             | 32 bits | -2, -1, -, 1, 2                          | -2.147.483.648 a 2.147.483.647                          |
+| ```long```    | Inteiro de complemento para dois  | 0             | 64 bits | -2L, -1L, 0L, 1L, 2L                     | -9.223.372.036.854.775.808 a -9.223.372.036.854.775.807 |
+| ```float```   | Ponto flutuante da norma IEEE 754 | 0.0           | 32 bits | 1.23e100f, -1.23e-100f, .3f, 3.14F       | Até 7 dígitos decimais                                  |
+| ```double```  | Ponto flutuante da norma IEEE 754 | 0.0           | 64 bits | 1.23456e300d, -1.23456e-300d, 1e1d       | Até 16 dígitos decimais                                 |
 
 ### Casting e promoção
 
