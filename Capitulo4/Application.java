@@ -3,6 +3,7 @@ package Capitulo4;
 import java.sql.SQLOutput;
 
 public class Application {
+
     public static void main(String[] args) {
         Account myAccount = new Account();
         myAccount.holder = "Ryan";
@@ -23,7 +24,6 @@ public class Application {
         otherAccount.openingDate.ano = 2015;
 
         System.out.println("Account created!");
-
 
 
 //        System.out.println(myAccount.retrieveDataToPrint());
